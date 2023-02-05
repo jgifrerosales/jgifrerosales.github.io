@@ -1,12 +1,25 @@
-<div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
-    <h2 id="section-portfolio" style="text-decoration: underline; padding: 15px">PORTFOLIO</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="display: flex; flex-direction: column; justify-content: center; text-align: center;">
+      <h2 id="section-portfolio" style="text-decoration: underline; padding: 15px">PORTFOLIO</h2>
+    </div>
   </div>
 </div>
 
-<mdb-carousel [controls]="true" [indicators]="true" style="margin: 5px 10px; box-shadow: 5px 5px 5px lightgrey">
-  <mdb-carousel-item>
+<mdb-carousel [controls]="true" [indicators]="true" [interval]="0" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey" *ngIf="projectList != undefined">
+  <mdb-carousel-item *ngFor="let project of projectList.projects">
+    <img
+      [src]="project.images"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block" (click)="openProjectDetailModal(project)">
+      <h5>{{project.name}}</h5>
+      <p>{{project.subtitle}}</p>
+    </div>
+  </mdb-carousel-item>
+  <!-- <mdb-carousel-item>
     <img
       src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
       class="d-block w-100"
@@ -38,5 +51,5 @@
       <h5>Third slide label</h5>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </div>
-  </mdb-carousel-item>
+  </mdb-carousel-item> -->
 </mdb-carousel>

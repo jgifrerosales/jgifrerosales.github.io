@@ -25,6 +25,9 @@ import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
 import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+import { ProjectService } from './services/project.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ModalProjectComponent } from './modal/modal-project.component';
 
 
 
@@ -35,12 +38,14 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     SectionMeComponent,
     SectionPortfolioComponent,
     SectionAboutComponent,
-    SectionContactComponent
+    SectionContactComponent,
+    ModalProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,
@@ -57,7 +62,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
     MdbTooltipModule,
     MdbValidationModule,
   ],
-  providers: [],
+  providers: [ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
