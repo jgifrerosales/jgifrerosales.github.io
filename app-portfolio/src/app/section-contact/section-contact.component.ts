@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FileService } from '../services/file.service';
 
 @Component({
   selector: 'app-section-contact',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class SectionContactComponent {
 
+  filename: string = "JoaquimGifreRosales_CV.pdf";
+  filepath: string = "assets/docs/JoaquimGifreRosales_CV.pdf";
+
+  constructor(
+    private fileService: FileService
+  ) {}
+
+  downloadFile(){
+    this.fileService.doDownloadFile(this.filename, this.filepath);
+  }
 }

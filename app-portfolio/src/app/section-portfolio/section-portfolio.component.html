@@ -6,50 +6,24 @@
     </div>
   </div>
 </div>
-
-<mdb-carousel [controls]="true" [indicators]="true" [interval]="0" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey" *ngIf="projectList != undefined">
-  <mdb-carousel-item *ngFor="let project of projectList.projects">
-    <img
-      [src]="project.images"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block" (click)="openProjectDetailModal(project)">
-      <h5>{{project.name}}</h5>
-      <p>{{project.subtitle}}</p>
-    </div>
-  </mdb-carousel-item>
-  <!-- <mdb-carousel-item>
-    <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>First slide label</h5>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Second slide label</h5>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-  </mdb-carousel-item>
-  <mdb-carousel-item>
-    <img
-      src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
-      class="d-block w-100"
-      alt="..."
-    />
-    <div class="carousel-caption d-none d-md-block">
-      <h5>Third slide label</h5>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </div>
-  </mdb-carousel-item> -->
-</mdb-carousel>
+<div class="container">
+  <div class="row">
+    <p>
+      This portfolio is currently based on the projects I have developed during the Masters Degree on Videogames Design & Development at UOC (Universitat Oberta de Catalunya).
+      All of these projects are made with Unity3D and all of them have allowed me to experiment with different packages and aspects of the game engine.
+    </p>
+  </div>
+  <mdb-carousel [controls]="true" [indicators]="true" [interval]="0" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey" *ngIf="projectList != undefined">
+    <mdb-carousel-item *ngFor="let project of projectList.projects">
+      <img
+        [src]="project.images"
+        class="d-block w-100"
+        alt="..."
+      />
+      <div class="carousel-caption d-none d-md-block" (click)="openProjectDetailModal(project)">
+        <h5>{{project.name}}</h5>
+        <p>{{project.subtitle}}</p>
+      </div>
+    </mdb-carousel-item>
+  </mdb-carousel>
+</div>

@@ -28,6 +28,7 @@ import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { ProjectService } from './services/project.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalProjectComponent } from './modal/modal-project.component';
+import { FileService } from './services/file.service';
 
 
 
@@ -62,7 +63,10 @@ import { ModalProjectComponent } from './modal/modal-project.component';
     MdbTooltipModule,
     MdbValidationModule,
   ],
-  providers: [ProjectService],
+  providers: [
+    ProjectService,
+    FileService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
