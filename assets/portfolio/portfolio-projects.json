@@ -1,0 +1,28 @@
+{
+  "projects": [
+    {
+      "name": "First project",
+      "subtitle": "testing first project subtitle",
+      "description": "This first project was ment to be\na game in which bla bla",
+      "images": ["https://mdbcdn.b-cdn.net/img/new/slides/041.webp"],
+      "videos": [],
+      "demo": ""
+    },
+    {
+      "name": "Second project",
+      "subtitle": "testing another project subtitle",
+      "description": "This second project was ment to be\na game in which bla bla",
+      "images": ["https://mdbcdn.b-cdn.net/img/new/slides/042.webp"],
+      "videos": [],
+      "demo": ""
+    },
+    {
+      "name": "Third project",
+      "subtitle": "bla bla bla",
+      "description": "This third project was ment to be\na game in which bla bla",
+      "images": ["https://mdbcdn.b-cdn.net/img/new/slides/043.webp"],
+      "videos": [],
+      "demo": ""
+    }
+  ]
+}
