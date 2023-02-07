@@ -1,28 +1,44 @@
 {
   "projects": [
     {
-      "name": "First project",
-      "subtitle": "testing first project subtitle",
-      "description": "This first project was ment to be\na game in which bla bla",
+      "name": "Pelea de insultos",
+      "subtitle": "Swearing battle in a bar minigame. Uses swears list from 'Monkey Island' videogame.",
+      "description": "<p>This project is a turn-based minigame in which the player or AI select an opening line or answer to a swear. One of the answers is correct and allow the contestant to score a point.</p><p>The scoring system of the minigame is represented with healthbars, it is supposed to be a fight after all, so the one who loses all its health loses the game.</p><p>The things I would highlight about this project development are:</p><ul><li>The implementation of a FSM to develop the different states of the game.</li><li>All swears data is imported from a JSON file, adding or updating swears is as simple as modifying the file.</li><li>All the fighting style related elements where interesting and fun to add, my favourite ones are the feedback SFX after the swearing+answer interaction.</li></ul><p>I only take credit for the UI design and code implementation. The swears come from 'Monkey Island' videogame and the sounds and music are free licensed assets from the web.</p>",
       "images": ["https://mdbcdn.b-cdn.net/img/new/slides/041.webp"],
       "videos": [],
-      "demo": ""
+      "demo": "/assets/portfolio/demos/Swearing_Battle/Swearing_Battle.exe"
     },
     {
-      "name": "Second project",
-      "subtitle": "testing another project subtitle",
-      "description": "This second project was ment to be\na game in which bla bla",
+      "name": "Undead Showdown",
+      "subtitle": "Top-down 2D shooter, the main objective is to survive the zombie horde for as long as you can.",
+      "description": "<p>This project is a top-down shooter within a single map that throws unlimited zombie horde waves to the player. The main goal of this minigame is to survive for as long as possible through the different waves.</p><p>The player can find different items in the town. This items can heal the player, replenish the ammo or swap the current weapon to a more powerful one.</p><p>The things I would highlight about this project development are:</p><ul><li>The development of a whole game experience, whith its splash screens, menus and game level.</li><li>Use of ScriptableGameObjects to define weapons and different types of projectiles to make weapon creation easier.</li><li>The wave system allows to keep spawning enemies in the level up to certain limit and has a maximum amount for each round, after killing all the remaining zombies a new round starts and its limits are increased.</li></ul><p>I only take credit for the UI design and code implementation. This game sprites are from Kenney.nl, the A* pathfinding is from a free Unity asset and the sounds and music are free licensed assets from the web.</p>",
       "images": ["https://mdbcdn.b-cdn.net/img/new/slides/042.webp"],
       "videos": [],
-      "demo": ""
+      "demo": "/assets/portfolio/demos/Undead_Showdown/Undead_Showdown.exe"
     },
     {
-      "name": "Third project",
-      "subtitle": "bla bla bla",
-      "description": "This third project was ment to be\na game in which bla bla",
+      "name": "Race Game",
+      "subtitle": "3D car game, the main objective is getting the fastest lap.",
+      "description": "<p>This project is a 3D car game in which the player has to get through all the checkpoints before completing one lap.Once the player completes one lap, a ghost of his best lap is spawned to the game.</p><p>There are a couple of circuits and two different configurations for the car. These car configurations affect the behaviour of the WheelCollider components attached to each wheel.</p><p>The things I would highlight about this project development are:</p><ul><li>The repetition mode after the race and the ghost work by writting ScriptableGameObjects and exporting them to files. These store the rotation and position of the car and the time of the lap.</li><li>The inclusion of Unity Packages to experiment with the InputSystem and Cinemachine</li></ul><p>I only take credit for the UI design and code implementation. This game uses Unity Packages and different assets from the store to implement the roads, vegetation and other props and the sounds and music are free licensed assets from the web.</p>",
       "images": ["https://mdbcdn.b-cdn.net/img/new/slides/043.webp"],
       "videos": [],
-      "demo": ""
+      "demo": "/assets/portfolio/demos/Race_Game/Race_Game.exe"
+    },
+    {
+      "name": "Sokoban Editor",
+      "subtitle": "Recreating Sokoban and adding an in-game level editor.",
+      "description": "<p>This project is a recreation of the puzzle game named Sokoban. The main objective of this game is to push boxes into goal squares, once all boxes are on a goal square the player wins.</p><p>There are 10 preloaded levels in the game build using the game editor. There is the possibility to create and update the player levels. The editor checks a list of basic conditions that prevent the level to be saved if there are missing elements.</p><p>The things I would highlight about this project development are:</p><ul><li>Recreates the original game, replicating its mechanics and UI.</li><li>Adds an in-game editor that allows to create custom levels, save, load and playtest them. The save & load system is made by writting json files in the StreamingAssets folder.</li></ul><p>I only take credit for the UI design and code implementation. This game sprites, sounds and music are free licensed assets from the web.</p>",
+      "images": ["https://mdbcdn.b-cdn.net/img/new/slides/043.webp"],
+      "videos": [],
+      "demo": "/assets/portfolio/demos/Sokoban_Editor/Sokoban_Editor.exe"
+    },
+    {
+      "name": "Deeper into the Dungeon",
+      "subtitle": "Rogelite game that generates randomized levels and pushes the player to explore dangerous dungeons.",
+      "description": "<p>This project was developed as the final project for the Masters Degree in Videogame Design & Development. The game consists in a randomized dungeon generator and simple combat and exploration mechanics.</p><p>The dungeon generation is component based which means that there are predefined rooms and hallways and from a starting room new rooms and hallways are spawned and connected to certain positions. Exploration and combat are inspired by modern ARPGs.</p><p>The things I would highlight about this project development are:</p><ul><li>The dungeon generation. Its expansion resembles the search algorythm BFS and the spawned components are rotated to check if they fit in space.</li><li>Each component of the dungeon has a randomized finallity, this means each spawned component can include traps, enemies, treasures or the key to the exit.</li><li>After exploring different floors, appears a boss room. The boss will call for aid at certain health percentages.</li><li>This project allowed experimenting with Unity's InputSystem, Cinemachine and URP.</li><li>This is the most complete project I have done this far, it has a <a href='https://deeper-into-the-dungeon.blogspot.com'>devblog</a> and a trailer</li></ul><p>Currently the devblog is written in spanish, I am working to translate it to english.</p><p>I take credit for the UI design and code implementation. This game uses Unity Packages and different assets from the store including packs from SyntyStudios. The sounds and music are free licensed assets from the web.</p>",
+      "images": ["https://mdbcdn.b-cdn.net/img/new/slides/043.webp"],
+      "videos": ["/assets/portfolio/videos/Deeper_into_the_Dungeon/Trailer.mp4"],
+      "demo": "/assets/portfolio/demos/Deeper_into_the_Dungeon/Deeper_into_the_Dungeon.exe"
     }
   ]
 }

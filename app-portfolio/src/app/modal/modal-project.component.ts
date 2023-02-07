@@ -7,10 +7,29 @@ import { Project } from '../model/projects';
   templateUrl: './modal-project.component.html',
   styleUrls: ['./modal-project.component.scss'],
 })
-export class ModalProjectComponent {
+export class ModalProjectComponent implements OnInit {
   project: Project;
+
+  carouselItems: any[] = []
 
   title: string | null = null;
 
   constructor(public modalRef: MdbModalRef<ModalProjectComponent>) {}
+
+  ngOnInit(): void {
+    let content = document.getElementById("content");
+    if (content) content.insertAdjacentHTML('afterend',this.project.description);
+
+    this.carouselItems = [];
+    if (this.project.videos != undefined && this.project.videos.length > 0) {
+      this.project.videos.forEach(video => {
+        this.carouselItems.push({src: video, type: 'video'});
+      });
+    }
+    if (this.project.images != undefined && this.project.images.length > 0) {
+      this.project.images.forEach(image => {
+        this.carouselItems.push({src: image, type: 'image'});
+      });
+    }
+  }
 }

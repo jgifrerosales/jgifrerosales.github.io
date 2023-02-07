@@ -30,7 +30,7 @@ export class SectionPortfolioComponent implements OnInit {
   }
 
   openProjectDetailModal(project: Project) {
-    this.modalRef = this.modalService.open(ModalProjectComponent, {data: {project: project}});
+    this.modalRef = this.modalService.open(ModalProjectComponent, {data: {project: project}, modalClass: "modal-lg"});
     this.modalRef.onClose.subscribe((message: any) => {
       console.log(message);
     });
