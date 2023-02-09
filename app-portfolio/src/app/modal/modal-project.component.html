@@ -9,16 +9,14 @@
     ></button>
   </div>
   <div class="modal-body">
-    <mdb-carousel [controls]="false" [indicators]="true" [interval]="0" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey">
-      <mdb-carousel-item *ngFor="let element of carouselItems">
+    <mdb-carousel [controls]="false" [indicators]="true" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey">
+      <mdb-carousel-item *ngFor="let element of carouselItems" [interval]="6000">
         <div *ngIf="element.type === 'video'">
-          <video width="320" height="240" controls style="width: 100%;">
-            <source [src]="element.src" type="video/mp4">
-          Your browser does not support the video tag.
-          </video>
+          <youtube-player [videoId]="element.src" style="height: auto; width: 100%;">
+          </youtube-player>
         </div>
         <div *ngIf="element.type === 'image'">
-          <img [src]="element.src" class="d-block w-100" alt="..." style="width: 100%;" />
+          <img [src]="element.src" class="d-block w-100" alt="..." style="height: auto; width: 100%;" />
         </div>
       </mdb-carousel-item>
     </mdb-carousel>

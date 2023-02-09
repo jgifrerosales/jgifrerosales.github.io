@@ -15,8 +15,8 @@
   </div>
   <mdb-carousel [controls]="true" [indicators]="true" [interval]="0" style="margin: 2% 10%; box-shadow: 10px 10px 5px lightgrey" *ngIf="projectList != undefined">
     <mdb-carousel-item *ngFor="let project of projectList.projects">
-      <img
-        [src]="project.images"
+      <img *ngIf="project.images != undefined"
+        [src]="project.images[0]"
         class="d-block w-100"
         alt="..."
       />

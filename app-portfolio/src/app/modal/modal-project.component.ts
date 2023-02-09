@@ -8,6 +8,9 @@ import { Project } from '../model/projects';
   styleUrls: ['./modal-project.component.scss'],
 })
 export class ModalProjectComponent implements OnInit {
+
+  apiLoaded: boolean = false;
+
   project: Project;
 
   carouselItems: any[] = []
@@ -17,6 +20,13 @@ export class ModalProjectComponent implements OnInit {
   constructor(public modalRef: MdbModalRef<ModalProjectComponent>) {}
 
   ngOnInit(): void {
+    if (!this.apiLoaded) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      this.apiLoaded = true;
+    }
+
     let content = document.getElementById("content");
     if (content) content.insertAdjacentHTML('afterend',this.project.description);
 

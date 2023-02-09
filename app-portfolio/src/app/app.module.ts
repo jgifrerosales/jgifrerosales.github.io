@@ -29,6 +29,8 @@ import { ProjectService } from './services/project.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalProjectComponent } from './modal/modal-project.component';
 import { FileService } from './services/file.service';
+import { SafePipe } from './pipe/safe.pipe';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 
@@ -40,7 +42,8 @@ import { FileService } from './services/file.service';
     SectionPortfolioComponent,
     SectionAboutComponent,
     SectionContactComponent,
-    ModalProjectComponent
+    ModalProjectComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { FileService } from './services/file.service';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
+    YouTubePlayerModule
   ],
   providers: [
     ProjectService,
